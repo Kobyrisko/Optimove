@@ -1,0 +1,22 @@
+.mediumBox{
+	width: 60%;
+	height: 200px;
+	margin-left: 20%;
+	margin-top: 20%;
+	border: 1px solid;
+	border-color: black;
+	text-align: center;
+}
+#punchIn h3{
+	text-align: center;
+}
+#punchIn h4{
+	text-align: right;
+}
+section{
+	margin-top: 20px;
+}
+nav li:last-child{
+	position: absolute;
+	right: 0;
+}

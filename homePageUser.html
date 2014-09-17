@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Optimove Test Koby Riskoich</title>
+		
+		<!-- Bootstrp CSS-->
+		<link href="css/bootstrap.min.css" type = "text/css" rel = "stylesheet"/>
+		
+		<!--Custom CSS-->
+		<link href="css/style.css" type = "text/css" rel = "stylesheet"/>
+		<!-- Jquery-->
+		<script src = "js/jquery-1.11.0.js"></script>
+		<!--Bootstrap JS-->
+		<script src = "js/bootstrap.js"></script>
+		<!--Jquery UI-->
+    	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    	<script src = "js/javascript.js"></script>
+	</head>
+	
+	<body onload="Initialize.Initialize()">
+			<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><img src = "Images/Optimove3.jpg" class = "navbar-brand"> </li>
+					<li><a href="#" id = "punchInButton">Punch In</a></li>
+					<li><a href = "#" id = "getAReport">Get a report</a></li>
+					<li><a>Users Managment</a></li>
+					<li><a>Hello User</a></li>
+				</ul>
+			</nav>
+			<section id = "punchIn">
+				<div class = "container">
+					<form role = "form" id = "punchInForm">
+						<h3>Punch Time</h3>
+						<input type = "date" class = "form-control date" placeholder="Date">
+						<input type = "time" class= "form-control timeIn" placeholder="Time in" >
+						<input type = "time" class= "form-control timeOut" placeholder="Time out">
+						<a href = "#"><h4><span class ="glyphicon glyphicon-plus"></span></h4></a>
+						<input type = "submit" value = "Submit" class = "form-control"/>
+					</form>
+				</div>
+			</section>
+			<section id = "monthlyTable">
+				<div class = "container">
+					<table class= "table" id = "userPunchTimeTable">
+						<thead>
+								<tr>
+									<th>Date</th>
+									<th>Time in</th>
+									<th>Time out</th>
+								</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+			</div>
+			</section>
+			
+			<section id = "issueReport">
+				<form id = "issueReportForm">
+					<select class="form-control" id = "userSelection">
+					</select>
+					<input type = "date" class = "form-control" placeholder="From Date">
+					<input type = "date" class = "form-control" placeholder="To Date">
+					<input type = "submit" class= "form-control" value = "Submit">
+				</form>
+			</section>
+		
+		
+	</body>
+</html>
