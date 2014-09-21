@@ -13,22 +13,24 @@
 		<!--Bootstrap JS-->
 		<script src = "js/bootstrap.js"></script>
 		<!--Jquery UI-->
+		
+		<script src = "js/User.js"> </script>
+    	<script src = "js/punchTime.js"> </script>
     	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    	<script src = "js/javascript.js"></script>
+    	<script src = "js/javascript.js"> </script>
 	</head>
 	
 	<body onload="Initialize.Initialize()">
-			<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+			<nav class="navbar navbar-inverse navbar-fixed" role="navigation" id = "navBar">
 				<ul class="nav navbar-nav">
 					<li><img src = "Images/Optimove3.jpg" class = "navbar-brand"> </li>
 					<li><a href="#" id = "punchInButton">Punch In</a></li>
 					<li><a href = "#" id = "getAReport">Get a report</a></li>
-					<li><a>Users Managment</a></li>
-					<li><a>Hello User</a></li>
 				</ul>
 			</nav>
+		<article>
 			<section id = "punchIn">
-				<div class = "container">
+				<div class = "container-fluid">
 					<form role = "form" id = "punchInForm">
 						<h3>Punch Time</h3>
 						<input type = "date" class = "form-control date" placeholder="Date">
@@ -40,7 +42,7 @@
 				</div>
 			</section>
 			<section id = "monthlyTable">
-				<div class = "container">
+				<div class = "container-fluid">
 					<table class= "table" id = "userPunchTimeTable">
 						<thead>
 								<tr>
@@ -57,14 +59,39 @@
 			
 			<section id = "issueReport">
 				<form id = "issueReportForm">
-					<select class="form-control" id = "userSelection">
+					<select class="form-control" id = "">
 					</select>
 					<input type = "date" class = "form-control" placeholder="From Date">
 					<input type = "date" class = "form-control" placeholder="To Date">
 					<input type = "submit" class= "form-control" value = "Submit">
 				</form>
 			</section>
+			
+			<section id = "UserManagement">
+				<form role = "form" id = "addNewUserForm" action = "#">
+					<input type = "text" class = "form-control" placeholder="Full Name" id = "Name">
+					<input type  = "text" class = "form-control" placeholder="Username" id = "Username">
+					<input type = "password" class = "form-control" placeholder="Password" id = "Username">
+					<select class = "form-control" id = "UserType">
+						<option>Standard User</option>
+						<option>Administrator</option>
+					</select>
+					<input type = "submit" class = "form-control" value = "Submit"/>
+				</form>
+				<form id = "deleteUserForm">
+					<select id ="userSelection" class = "form-control">
+					</select>
+					<input type="submit" value ="Delete User" class= "form-control"/>
+				</form>
+			</section>
+		</article>
 		
-		
+		<aside>
+			<ul class="nav navbar-nav" id ="adminBar">
+				<li><a href = "#" id = "addUserButton">Add User</a></li>
+				<li><a href = "#" id = "deleteUserButton">Delete User</a></li>
+				<li><a href = "#" id = "updateUserButton">Update User</a></li>
+			</ul>
+		</aside>
 	</body>
 </html>

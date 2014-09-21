@@ -4,8 +4,20 @@
 		<title> Optimove Test Koby Riskoich</title>
 		<link href="css/bootstrap.min.css" type = "text/css" rel = "stylesheet"/>
 		<link href="css/style.css" type = "text/css" rel = "stylesheet"/>
+		<script src = "js/User.js"> </script>
+		<script src = "js/jquery-1.11.0.js"> </script>
+		<script>
+			if(localStorage.getItem("usersList") == null)
+			{
+				var usersList = new Array();
+				var admin = new User("Koby Riskovich", "admin", "123456", "Administrator");
+				var newUser = new User("Eddie", "Eddie", "123456", "StandardUser");
+				usersList.push(admin);
+				usersList.push(newUser);
+				localStorage.setItem("usersList", JSON.stringify(usersList));
+			}
+		</script>
 	</head>
-	
 	<body onload="Login.Initialize()">
 				<div class = "mediumBox">
 						<form role = "form" id = "loginForm" action = "homePageUser.html" method="get">

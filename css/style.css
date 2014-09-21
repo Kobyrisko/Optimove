@@ -20,3 +20,18 @@ nav li:last-child{
 	position: absolute;
 	right: 0;
 }
+aside{
+	width: 160px;
+	height: 100%;
+	content = '';
+	background-color: #222;
+	position: fixed;
+	top: 50px;
+}
+article{
+	width: 60%;
+	margin-left: 160px;
+}
+aside ul{
+	padding-top: 50px;
+}
